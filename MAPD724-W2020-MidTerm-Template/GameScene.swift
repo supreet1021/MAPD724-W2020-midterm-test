@@ -80,12 +80,12 @@ class GameScene: SKScene {
     
     func touchMoved(toPoint pos : CGPoint)
     {
-        self.planeSprite?.TouchMove(newPos: CGPoint(x: pos.x, y: -575))
+        self.planeSprite?.TouchMove(newPos: CGPoint(x: -575, y: pos.y))
     }
     
     func touchUp(atPoint pos : CGPoint)
     {
-        self.planeSprite?.TouchMove(newPos: CGPoint(x: pos.x, y: -575))
+        self.planeSprite?.TouchMove(newPos: CGPoint(x: -575, y: pos.y))
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?)
