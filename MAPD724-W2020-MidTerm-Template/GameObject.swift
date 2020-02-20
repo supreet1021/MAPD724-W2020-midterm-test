@@ -1,4 +1,7 @@
-import SpriteKit
+
+//GameObject.swift
+//Name:Supreet Kaur
+//Student Id:301093932import SpriteKit
 import GameplayKit
 
 class GameObject: SKSpriteNode, GameProtocol

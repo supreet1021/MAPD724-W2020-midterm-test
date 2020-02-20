@@ -1,4 +1,7 @@
-import SpriteKit
+
+//Cloud.swift
+//Name:Supreet Kaur
+//Student Id:301093932import SpriteKit
 import GameplayKit
 
 class Cloud: GameObject
@@ -8,7 +11,7 @@ class Cloud: GameObject
     //constructor
     init()
     {
-        super.init(imageString: "cloud", initialScale: 1.5)
+        super.init(imageString: "cloud", initialScale: 0.5)
         Start()
     }
     
@@ -21,7 +24,7 @@ class Cloud: GameObject
     override func CheckBounds()
     {
         // bottom boundary
-        if(self.position.x < -801)
+        if(self.position.x < -450)
         {
             self.Reset()
         }
@@ -30,17 +33,17 @@ class Cloud: GameObject
     
     func Move()
     {
-        self.position.x -= self.dy!
-        self.position.y -= self.dx!
+        self.position.y -= self.dy!
+        self.position.x -= self.dx!
     }
     
     override func Reset()
     {
-        self.position.x = 801
-        let randomX:Int = (randomSource?.nextInt(upperBound: 614))! - 307
-        self.position.y = CGFloat(randomX)
-        self.dy = CGFloat((randomSource?.nextUniform())! * 5.0) + 5.0
-        self.dx = CGFloat((randomSource?.nextUniform())! * -4.0) + 2.0
+        self.position.x = 450
+        let randomY:Int = (randomSource?.nextInt(upperBound: 360))! - 180
+        self.position.y = CGFloat(randomY)
+        self.dx = CGFloat((randomSource?.nextUniform())! * 5.0) + 5.0
+        self.dy = CGFloat((randomSource?.nextUniform())! * -3.0) + 1.5
         self.isColliding = false
     }
     

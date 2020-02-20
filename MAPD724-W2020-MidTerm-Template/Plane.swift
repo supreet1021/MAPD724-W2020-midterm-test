@@ -1,11 +1,14 @@
-import SpriteKit
+
+//Plane.swift
+//Name:Supreet Kaur
+//Student Id:301093932import SpriteKit
 
 class Plane: GameObject
 {
     // constructor
     init()
     {
-        super.init(imageString: "plane", initialScale: 2.0)
+        super.init(imageString: "plane", initialScale: 1.0)
         Start()
     }
     
@@ -16,15 +19,15 @@ class Plane: GameObject
     override func CheckBounds()
     {
         // right boundary
-        if(self.position.x >= 307 - self.halfWidth!)
+        if(self.position.y >= 180 - self.halfWidth!)
         {
-            self.position.x = 307 - self.halfWidth!
+            self.position.y = 180 - self.halfWidth!
         }
         
         // left boundary
-        if(self.position.x <= -307 + self.halfWidth!)
+        if(self.position.y <= -180 + self.halfWidth!)
         {
-            self.position.x = -307 + self.halfWidth!
+            self.position.y = -180 + self.halfWidth!
         }
     }
     
